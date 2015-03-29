@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pct-4q-XBq">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -16,36 +17,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue-blur.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dXV-hg-NNa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue-blur.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dXV-hg-NNa">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="420" height="736"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="747" id="Sus-6f-69k"/>
+                                    <constraint firstAttribute="width" constant="420" id="eYW-nb-PGH"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Sus-6f-69k"/>
+                                        <exclude reference="eYW-nb-PGH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Sus-6f-69k"/>
+                                        <include reference="eYW-nb-PGH"/>
+                                    </mask>
                                 </variation>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B40-3z-2GK">
                                 <rect key="frame" x="247" y="138" width="203" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="203" id="I03-SX-lBb"/>
+                                    <constraint firstAttribute="height" constant="30" id="kVk-pw-aP6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="userText"/>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="87" y="155" width="203" height="30"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="I03-SX-lBb"/>
+                                        <exclude reference="kVk-pw-aP6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="I03-SX-lBb"/>
+                                        <include reference="kVk-pw-aP6"/>
+                                    </mask>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="whK-Oq-Gx9">
                                 <rect key="frame" x="247" y="220" width="203" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OFy-kU-FyZ"/>
+                                    <constraint firstAttribute="width" constant="203" id="ewr-kC-ZfY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="passText"/>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="87" y="234" width="203" height="30"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="OFy-kU-FyZ"/>
+                                        <exclude reference="ewr-kC-ZfY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="OFy-kU-FyZ"/>
+                                        <include reference="ewr-kC-ZfY"/>
+                                    </mask>
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgZ-Uk-md1">
                                 <rect key="frame" x="277" y="335" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="O8H-L5-dgZ"/>
+                                    <constraint firstAttribute="width" constant="203" id="xSx-xW-oqT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.97606928660000003" green="0.97606928660000003" blue="0.97606928660000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -54,8 +98,17 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="buttonLogin"/>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="87" y="304" width="203" height="39"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="O8H-L5-dgZ"/>
+                                        <exclude reference="xSx-xW-oqT"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="O8H-L5-dgZ"/>
+                                        <include reference="xSx-xW-oqT"/>
+                                    </mask>
                                 </variation>
                                 <connections>
                                     <action selector="doLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1HL-IT-l7R"/>
@@ -63,23 +116,84 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Superheroes List" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cU7-26-ozz">
                                 <rect key="frame" x="274" y="48" width="48" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="191" id="iAm-Lm-FEX"/>
+                                    <constraint firstAttribute="height" constant="21" id="lxp-nR-zlu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="25"/>
                                 <color key="textColor" red="0.97606928660000003" green="0.97606928660000003" blue="0.97606928660000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="91" y="84" width="199" height="21"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="iAm-Lm-FEX"/>
+                                        <exclude reference="lxp-nR-zlu"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="iAm-Lm-FEX"/>
+                                        <include reference="lxp-nR-zlu"/>
+                                    </mask>
                                 </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.11919516937122591" green="0.35624784034269041" blue="0.51852509469696972" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="dXV-hg-NNa" secondAttribute="bottom" id="464-qk-frZ"/>
+                            <constraint firstItem="whK-Oq-Gx9" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="234" id="49h-7y-yd1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dXV-hg-NNa" secondAttribute="trailing" id="92v-QL-O4k"/>
+                            <constraint firstItem="dXV-hg-NNa" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="EzK-9G-xT7">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-2"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="cU7-26-ozz" secondAttribute="centerX" constant="6.5" id="LUK-B5-ZTU"/>
+                            <constraint firstItem="MgZ-Uk-md1" firstAttribute="centerX" secondItem="whK-Oq-Gx9" secondAttribute="centerX" id="QDQ-pV-7ho"/>
+                            <constraint firstItem="cU7-26-ozz" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="83" id="QDw-iS-NW1"/>
+                            <constraint firstItem="MgZ-Uk-md1" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="304" id="S2x-xQ-R3N"/>
+                            <constraint firstItem="dXV-hg-NNa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="VMe-bv-44t">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-16"/>
+                            </constraint>
+                            <constraint firstItem="whK-Oq-Gx9" firstAttribute="centerX" secondItem="B40-3z-2GK" secondAttribute="centerX" id="dZh-WL-4BB"/>
+                            <constraint firstItem="B40-3z-2GK" firstAttribute="centerX" secondItem="cU7-26-ozz" secondAttribute="centerX" constant="-1" id="hXf-uP-1CT">
+                                <variation key="heightClass=regular-widthClass=compact" constant="4"/>
+                            </constraint>
+                            <constraint firstItem="B40-3z-2GK" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="155" id="tZ7-Jf-YAH"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="dXV-hg-NNa"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="464-qk-frZ"/>
+                                <exclude reference="92v-QL-O4k"/>
+                                <exclude reference="EzK-9G-xT7"/>
+                                <exclude reference="VMe-bv-44t"/>
+                                <exclude reference="LUK-B5-ZTU"/>
+                                <exclude reference="QDw-iS-NW1"/>
+                                <exclude reference="hXf-uP-1CT"/>
+                                <exclude reference="tZ7-Jf-YAH"/>
+                                <exclude reference="49h-7y-yd1"/>
+                                <exclude reference="dZh-WL-4BB"/>
+                                <exclude reference="QDQ-pV-7ho"/>
+                                <exclude reference="S2x-xQ-R3N"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="dXV-hg-NNa"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="464-qk-frZ"/>
+                                <exclude reference="92v-QL-O4k"/>
+                                <include reference="EzK-9G-xT7"/>
+                                <include reference="VMe-bv-44t"/>
+                                <include reference="LUK-B5-ZTU"/>
+                                <include reference="QDw-iS-NW1"/>
+                                <include reference="hXf-uP-1CT"/>
+                                <include reference="tZ7-Jf-YAH"/>
+                                <include reference="49h-7y-yd1"/>
+                                <include reference="dZh-WL-4BB"/>
+                                <include reference="QDQ-pV-7ho"/>
+                                <include reference="S2x-xQ-R3N"/>
                             </mask>
                         </variation>
                     </view>
@@ -102,6 +216,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="dashboardID" id="X1J-kR-Kje" customClass="DashboardViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="22" sectionFooterHeight="22" id="bka-IM-vDY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -188,6 +303,7 @@
                         <viewControllerLayoutGuide type="bottom" id="224-uC-VGw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2Ev-65-tHU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blL-fn-PgI">
