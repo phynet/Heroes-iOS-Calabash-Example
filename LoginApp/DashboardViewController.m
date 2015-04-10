@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.accessibilityIdentifier = @"viewDashboard";
     self.userValueProp.text = self.userValue;
 
     

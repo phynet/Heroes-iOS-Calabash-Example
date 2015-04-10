@@ -115,7 +115,7 @@
                                     <action selector="doLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1HL-IT-l7R"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Superheroes List" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cU7-26-ozz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="BDD Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cU7-26-ozz">
                                 <rect key="frame" x="274" y="48" width="48" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="191" id="iAm-Lm-FEX"/>
